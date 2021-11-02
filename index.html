@@ -18,15 +18,20 @@
             return player
         }
         function declarewinner(playerSelection, computerSelection){
-            "rock" < "paper";
-            "rock" > "scissor";
-            "scissor" > "paper";
-            if (playerSelection > computerSelection) {
+            if (playerSelection == "rock" && computerSelection == "scissor") {
                 alert(`You win ! ${playerSelection} beats ${computerSelection}`);
-            }else if (playerSelection < computerSelection) {
+            }else if (playerSelection == "scissor" && computerSelection == "paper") {
+                alert(`You win ! ${playerSelection} beats ${computerSelection}`) 
+            }else if (playerSelection == "paper" && computerSelection == "rock") {
+                alert(`You win ! ${playerSelection} beats ${computerSelection}`) 
+            }else if (playerSelection == "rock" && computerSelection == "paper") {
+                alert(`You lose ! ${computerSelection} beats ${playerSelection}`)
+            }else if (playerSelection == "paper" && computerSelection == "scissor") {
+                alert(`You lose ! ${computerSelection} beats ${playerSelection}`)
+            }else if (playerSelection == "scissor" && computerSelection == "rock") {
                 alert(`You lose ! ${computerSelection} beats ${playerSelection}`)
             }
-            else {
+            else if (playerSelection == computerSelection){
                 alert(`No winner, both ${playerSelection}`);
             }
         }
