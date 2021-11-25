@@ -4,42 +4,36 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Paper-Scissor-Rock</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="js-file.js" defer></script>
 </head>
 <body>
-    <h1>hello world</h1>
-    <script>
-        function computerplay() {
-            let values = ["rock", "paper", "scissor"];
-            return values[Math.floor(Math.random() * values.length)];
-        }
-        function player() {
-            let player = prompt("Paper, Scissor or Rock?", "").toLowerCase();
-            return player
-        }
-        function declarewinner(playerSelection, computerSelection){
-            if (playerSelection == "rock" && computerSelection == "scissor") {
-                alert(`You win ! ${playerSelection} beats ${computerSelection}`);
-            }else if (playerSelection == "scissor" && computerSelection == "paper") {
-                alert(`You win ! ${playerSelection} beats ${computerSelection}`) 
-            }else if (playerSelection == "paper" && computerSelection == "rock") {
-                alert(`You win ! ${playerSelection} beats ${computerSelection}`) 
-            }else if (playerSelection == "rock" && computerSelection == "paper") {
-                alert(`You lose ! ${computerSelection} beats ${playerSelection}`)
-            }else if (playerSelection == "paper" && computerSelection == "scissor") {
-                alert(`You lose ! ${computerSelection} beats ${playerSelection}`)
-            }else if (playerSelection == "scissor" && computerSelection == "rock") {
-                alert(`You lose ! ${computerSelection} beats ${playerSelection}`)
-            }
-            else if (playerSelection == computerSelection){
-                alert(`No winner, both ${playerSelection}`);
-            }
-        }
-        declarewinner(player(), computerplay())
-        declarewinner(player(), computerplay())
-        declarewinner(player(), computerplay())
-        declarewinner(player(), computerplay())
-        declarewinner(player(), computerplay())
-    </script>
+    <header id="header">
+        <h1 class="title">Paper / Scissors / Rock - Game.</h1>
+    </header>
+    <div id="content">
+        <div id="score">
+            <ul>
+                <li id="player">
+                    Player
+                    <p class="player"></p>
+                </li>
+                <li id="computer">
+                    Computer
+                    <p class="computer"></p>
+                </li>
+            </ul>
+        </div>
+        <button id="paper" class="button">Paper</button>
+        <button id="scissor" class="button">Scissor</button>
+        <button id="rock" class="button">Rock</button>
+        <p id="contentText"></p>
+        <p id="counter"></p>
+    </div>
+    <footer id="footer">
+        <p>Made by MathDSF</p>
+    </footer>
+
 </body>
 </html>
